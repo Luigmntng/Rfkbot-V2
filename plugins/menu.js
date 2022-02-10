@@ -20,6 +20,7 @@ const defaultMenu = {
 │⬡ Tanggal Islam: *%dateIslamic*
 │⬡ Waktu: *%time*
 │
+│⬡ instagram = instagram.com/ahmdlui
 │⬡ Uptime: *%uptime (%muptime)*
 │⬡ Database: %rtotalreg dari %totalreg
 │⬡ Memory Used : *${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB*
@@ -220,7 +221,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 			return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
                         "title": `*${ucapan()}, ${name}*`.trim(),
-                        "description": `©AlyaaXzy`.trim(),
+                        "description": `©Ahmdlui`.trim(),
                         "footerText": "Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.",
                         "buttonText": "*Click Here*",
                         "listType": "SINGLE_SELECT",
@@ -362,7 +363,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                             }, {
                                 "rows": [{
                                     "title": "Owner bot",
-                                    "description": "pemilik AlyaaXzy",
+                                    "description": "recode by ahmdlui",
                                     "rowId": ".owner"
                                 }, {
                                     "title": "Donasi",
@@ -490,18 +491,18 @@ function clockString(ms) {
 }
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
-  res = "Selamat dinihari🌃"
+  res = "Isuk🌃"
   if (time >= 4) {
-    res = "Selamat pagi🌄"
+    res = "Enjing🌄"
   }
   if (time > 10) {
-    res = "Selamat siang🌄"
+    res = "Awan🌄"
   }
   if (time >= 15) {
-    res = "Selamat sore🌇"
+    res = "Surup🌇"
   }
   if (time >= 18) {
-    res = "Selamat malam🌉"
+    res = "Wengi🌉"
   }
   return res
 }
