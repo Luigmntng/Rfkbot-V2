@@ -49,7 +49,7 @@ handler.all = async m => {
 
 handler.rowner = true
 handler.help = ['update2']
-handler.tags = ['host']
+handler.tags = ['internet']
 handler.command = ['update2']
 
 handler.rowner = true
