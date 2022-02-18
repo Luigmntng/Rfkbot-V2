@@ -7,7 +7,7 @@ let handler = async (m, { conn, command }) => {
 await conn.sendButtonLoc(m.chat, await (await fetch(json.thumb)).buffer(), `
 _*${json.judul}*_
 _${json.desc}_
-`.trim(), watermark, 'Ceritahororr', `.ceritahorror`)
+`.trim(), footer, 'Ceritahororr', `.ceritahorror`)
 }
 handler.help = ['ceritahoror', 'ceritahrorr']
 handler.tags = ['internet', 'fun', 'quotes']
