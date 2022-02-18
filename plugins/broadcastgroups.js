@@ -16,8 +16,8 @@ const anu = {
 			"groupJid": "6285240750713-1610340626@g.us",
 			"inviteCode": "mememteeeekkeke",
 			"groupName": "P", 
-            "caption": "Jangan Lupa join kak", 
-            'jpegThumbnail': fs.readFileSync('fake.jpg')
+            "caption": "BROADCAST GROUP", 
+            'jpegThumbnail': fs.readFileSync('./src/RadBot.png')
 		}
 	}
 }
@@ -30,9 +30,9 @@ const anu = {
   let groups = conn.chats.all().filter(v => v.jid.endsWith('g.us') && !v.read_only && v.message && !v.announce).map(v => v.jid)
   let cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
   let teks = text ? text : cc.text
-  let content = await conn.cMod(m.chat, cc, /bc|broadcast/i.test(text) ? text : text + '\n' + readMore + '\n「 INI WM SUKI 」')
+  let content = await conn.cMod(m.chat, cc, /bc|broadcast/i.test(text) ? text : text + '\n' + readMore + '\n「 All Group Broadcast 」')
   conn.reply(m.chat, `_Mengirim pesan broadcast ke ${groups.length} grup_`, m)
-  for (let id of groups) conn.copyNForward(id, content, 'conversation', {quoted: anu, thumbnail: fs.readFileSync('fake.jpg'), contextInfo:{externalAdReply: {title: `© ${conn.user.name} BROADCAST` , body: '>///<',sourceUrl: 'https://chat.whatsapp.com/DdMbKYRxn5TCFrB9m10XnQ', thumbnail: fs.readFileSync('fake.jpg')}}} ,true)
+  for (let id of groups) conn.copyNForward(id, content, 'conversation', {quoted: anu, thumbnail: fs.readFileSync('./src/RadBot.png'), contextInfo:{externalAdReply: {title: `© ${conn.user.name} BROADCAST` , body: 'Jawa edition',sourceUrl: 'https://chat.whatsapp.com/DdMbKYRxn5TCFrB9m10XnQ', thumbnail: fs.readFileSync('./src/RadBot.png')}}} ,true)
   conn.reply(m.chat, `_Done_`, m)
 }
 handler.help = ['broadcastgroup','bcgc'].map(v => v + ' <teks>')
