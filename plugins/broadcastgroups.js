@@ -17,7 +17,7 @@ const anu = {
 			"inviteCode": "mememteeeekkeke",
 			"groupName": "P", 
             "caption": "Jangan Lupa join kak", 
-            'jpegThumbnail': fs.readFileSync('./fake.jpg')
+            'jpegThumbnail': fs.readFileSync('fake.jpg')
 		}
 	}
 }
@@ -32,7 +32,7 @@ const anu = {
   let teks = text ? text : cc.text
   let content = await conn.cMod(m.chat, cc, /bc|broadcast/i.test(text) ? text : text + '\n' + readMore + '\n「 INI WM SUKI 」')
   conn.reply(m.chat, `_Mengirim pesan broadcast ke ${groups.length} grup_`, m)
-  for (let id of groups) conn.copyNForward(id, content, 'conversation', {quoted: anu, thumbnail: fs.readFileSync('./fake.jpg'), contextInfo:{externalAdReply: {title: `© ${conn.user.name} BROADCAST` , body: '>///<',sourceUrl: 'https://chat.whatsapp.com/DdMbKYRxn5TCFrB9m10XnQ', thumbnail: fs.readFileSync('./fake.jpg')}}} ,true)
+  for (let id of groups) conn.copyNForward(id, content, 'conversation', {quoted: anu, thumbnail: fs.readFileSync('fake.jpg'), contextInfo:{externalAdReply: {title: `© ${conn.user.name} BROADCAST` , body: '>///<',sourceUrl: 'https://chat.whatsapp.com/DdMbKYRxn5TCFrB9m10XnQ', thumbnail: fs.readFileSync('fake.jpg')}}} ,true)
   conn.reply(m.chat, `_Done_`, m)
 }
 handler.help = ['broadcastgroup','bcgc'].map(v => v + ' <teks>')
