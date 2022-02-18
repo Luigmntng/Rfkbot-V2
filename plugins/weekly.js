@@ -10,7 +10,7 @@ let handler = async (m, { conn }) => {
         user.legendary += 3
         user.lastweekly= new Date * 1
     } else {
-        let buttons = `silahkan tunggu *🕒${timers}* lagi untuk bisa mengclaim lagi`.trim()
+        let buttons = `silahkan tunggu *馃晵${timers}* lagi untuk bisa mengclaim lagi`.trim()
         conn.send2Button(m.chat, buttons, footer, 'Daily', '#daily', 'Monthly', '#monthly')
     }
 }
