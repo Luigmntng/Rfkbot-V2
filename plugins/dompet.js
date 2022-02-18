@@ -62,7 +62,7 @@ Wallet *${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[0])
 
 Top Money *${usersmoney.indexOf(m.sender) + 1}* dari *${usersmoney.length}*
 `.trim()
-    await conn.send2ButtonLoc(m.chat, buttons, footer, 'Adventure', '.adventure', 'Shop', '.shop', m)
+    conn.send2Button(m.chat, buttons, footer, 'Adventure', '.adventure', 'Shop', '.shop', m)
 }
 handler.help = ['wallet', 'dompet']
 handler.tags = ['rpg']
